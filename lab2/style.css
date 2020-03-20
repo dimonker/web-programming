@@ -1,0 +1,114 @@
+body,
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.element1 {
+  height: 250px;
+  width: 250px;
+  margin: 0 200px;
+  background-color: red;
+  animation-name: stretch;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+@keyframes stretch {
+  0% {
+    transform: scale(0.3);
+    background-color: red;
+    border-radius: 100%;
+  }
+  50% {
+    background-color: orange;
+  }
+  100% {
+    transform: scale(1.5);
+    background-color: yellow;
+  }
+}
+
+.element2 {
+  height: 400px;
+  width: 400px;
+  background-color: red;
+  animation: pulse 3s ease infinite alternate,
+    nudge 5s linear infinite alternate;
+  border-radius: 100%;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    background-color: red;
+  }
+  50% {
+    background-color: orange;
+  }
+}
+
+@keyframes nudge {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(150px, 0);
+  }
+
+  80% {
+    transform: translate(-150px, 0);
+  }
+}
+
+.element3 {
+  margin-left: 150px;
+  animation: pulse3 0.25s infinite;
+  height: 400px;
+  width: 400px;
+  border-radius: 100%;
+}
+
+@keyframes pulse3 {
+  0% {
+    background-color: #001f3f;
+  }
+
+  50% {
+    background-color: yellow;
+  }
+
+  100% {
+    background-color: #001f3f;
+  }
+}
+
+body {
+  animation: pulse4 1s infinite;
+}
+
+@keyframes pulse4 {
+  0% {
+    background-color: #001f3f;
+  }
+
+  50% {
+    background-color: #ff4136;
+  }
+
+  100% {
+    background-color: #001f3f;
+  }
+}
